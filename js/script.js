@@ -165,4 +165,58 @@ window.addEventListener('DOMContentLoaded', function() {
 
     submitForm(form, input);
     submitForm(formContact, inputContact);
+
+    
+    // Отправка форм с использованием Promise
+    // function submitForm(nameForm, nameInput) {
+    //     nameForm.addEventListener('submit', function(event) {
+    //         event.preventDefault();
+
+    //         nameForm.appendChild(statusMessage);
+
+    //         let formData = new FormData(nameForm);
+    //         let obj = {};
+    //         formData.forEach(function(value, key) {
+    //             obj[key] = value;
+    //         });
+    //         let json = JSON.stringify(obj);
+
+    //         function postData(data) {
+
+    //             return new Promise(function(resolve, reject) {
+    //                 let request = new XMLHttpRequest();
+
+    //                 request.open('POST', 'server.php');
+
+    //                 request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+            
+    //                 request.addEventListener('readystatechange', function() {
+    //                     if (request.readyState < 4) {
+    //                         resolve();
+    //                     } else if(request.readyState === 4 && request.status == 200) {
+    //                         resolve();
+    //                     } else {
+    //                         reject();
+    //                     }
+    //                 });
+    //                 request.send(data);
+    //             });
+    //         }
+
+    //         function clearInput() {
+    //             for (let i = 0; i < nameInput.length; i++) {
+    //                 nameInput[i].value = '';
+    //             }
+    //         }
+
+    //     postData(json)
+    //         .then(() => statusMessage.innerHTML = message.loading)
+    //         .then(() => statusMessage.innerHTML = message.success)
+    //         .catch(() => statusMessage.innerHTML = message.failure)
+    //         .then(clearInput);
+    //     });
+    // }
+
+    // submitForm(form, input);
+    // submitForm(formContact, inputContact);
 });
